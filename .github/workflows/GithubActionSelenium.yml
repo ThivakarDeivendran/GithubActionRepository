@@ -4,7 +4,7 @@ on:
     inputs:
       logLevel:
         description: 'Log Level Setup'
-        required: true
+        required: false
         default: 'origin'
         type: choice
         options:
@@ -19,11 +19,11 @@ on:
       environmentName:
         description: 'Environment to run test'
         required: true
-        default: 'Dev'
+        default: 'Production'
         type: 'choice'
         options:
         - QA
-        - Dev
+        - Developer
         - Production
 
 jobs:
