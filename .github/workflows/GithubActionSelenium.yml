@@ -14,7 +14,7 @@ on:
         - origin
       print_tags:
         description: 'True to print tags'
-        required: true
+        required: false
         type: boolean
       environmentName:
         description: 'Environment to run test'
