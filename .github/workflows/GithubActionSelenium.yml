@@ -1,0 +1,35 @@
+name: TestingGithubActions
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log Level Setup'
+        required: false
+        default: 'origin'
+        type: choice
+        options:
+        - info
+        - test
+        - view
+        - origin
+      print_tags:
+        description: 'True to print tags'
+        required: false
+        type: boolean
+      environmentName:
+        description: 'Environment to run test'
+        required: true
+        default: 'Production'
+        type: 'choice'
+        options:
+        - QA
+        - Developer
+        - Production
+
+jobs:
+  jobNamePrint-tag:
+    runs-on: ubuntu-latest
+    if: ${{inputs.print_tags}}
+    steps:
+      - name: Print the input tag
+        run: echo The tags are ${{ inputs.environmentName }}
