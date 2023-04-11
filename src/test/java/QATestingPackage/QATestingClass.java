@@ -8,6 +8,12 @@ public class QATestingClass {
 		int b = 77;
 		int add = a+b ;
 		System.out.println(add);	
+		
+		System.out.println("Testing the Push event file");
+		
+		int c = 222;
+		int d = 333;
+		System.out.println(d-c);
 	}
 	
 }
