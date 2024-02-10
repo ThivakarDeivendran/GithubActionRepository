@@ -9,6 +9,10 @@ jobs:
     steps:
      - name: TestingfileCheckingOnPushEvent
        run: echo "Testing with Push event happen"
-    
+     - name: Setup Maven
+       uses: stCarolas/setup-maven@v5
+       with:
+         maven-version: default is 3.8.2
+          
    
 
